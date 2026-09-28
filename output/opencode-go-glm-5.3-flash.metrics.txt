@@ -1,0 +1,7 @@
+model=opencode-go/glm-5.3-flash
+elapsed_sec=523.2
+cost_usd=0.010595
+input_tokens=14986
+output_tokens=16694
+reasoning_tokens=0
+chars=8391

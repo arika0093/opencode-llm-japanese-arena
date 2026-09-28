@@ -1,0 +1,7 @@
+model=opencode-go/kimi-k3
+elapsed_sec=39.8
+cost_usd=0.091377
+input_tokens=14529
+output_tokens=2679
+reasoning_tokens=507
+chars=6494

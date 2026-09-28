@@ -1,0 +1,7 @@
+model=opencode/longcat-2.5-preview-free
+elapsed_sec=58.5
+cost_usd=0
+input_tokens=14728
+output_tokens=2883
+reasoning_tokens=429
+chars=7472

@@ -1,0 +1,7 @@
+model=opencode-go/space-bunny-free
+elapsed_sec=19.1
+cost_usd=0
+input_tokens=11996
+output_tokens=2425
+reasoning_tokens=0
+chars=7323

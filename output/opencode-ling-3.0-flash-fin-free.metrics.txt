@@ -1,0 +1,7 @@
+model=opencode/ling-3.0-flash-fin-free
+elapsed_sec=6.7
+cost_usd=0
+input_tokens=13785
+output_tokens=1448
+reasoning_tokens=104
+chars=3591

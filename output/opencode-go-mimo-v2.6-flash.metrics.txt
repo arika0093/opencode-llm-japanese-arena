@@ -1,0 +1,7 @@
+model=opencode-go/mimo-v2.6-flash
+elapsed_sec=56
+cost_usd=0.002095
+input_tokens=9212
+output_tokens=2765
+reasoning_tokens=51
+chars=6706

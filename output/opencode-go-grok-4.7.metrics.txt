@@ -1,0 +1,7 @@
+model=opencode-go/grok-4.7
+elapsed_sec=165.4
+cost_usd=0.11397
+input_tokens=12584
+output_tokens=3192
+reasoning_tokens=11363
+chars=7937

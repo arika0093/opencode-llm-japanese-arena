@@ -1,0 +1,7 @@
+model=opencode-go/deepseek-v4.1-flash
+elapsed_sec=12.5
+cost_usd=0.003936
+input_tokens=13453
+output_tokens=3083
+reasoning_tokens=106
+chars=7581

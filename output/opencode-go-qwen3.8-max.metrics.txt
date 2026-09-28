@@ -1,0 +1,7 @@
+model=opencode-go/qwen3.8-max
+elapsed_sec=66.8
+cost_usd=0.051344
+input_tokens=14932
+output_tokens=2930
+reasoning_tokens=650
+chars=7796

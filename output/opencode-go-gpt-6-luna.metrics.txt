@@ -1,0 +1,7 @@
+model=opencode-go/gpt-6-luna
+elapsed_sec=18.1
+cost_usd=0.002472
+input_tokens=3
+output_tokens=1501
+reasoning_tokens=269
+chars=3967

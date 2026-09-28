@@ -1,0 +1,7 @@
+model=opencode/big-pickle
+elapsed_sec=17.7
+cost_usd=0
+input_tokens=11996
+output_tokens=2538
+reasoning_tokens=32
+chars=7621

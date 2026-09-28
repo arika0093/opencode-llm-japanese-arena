@@ -1,0 +1,7 @@
+model=opencode/nemotron-3.5-lightning-free
+elapsed_sec=145.5
+cost_usd=0
+input_tokens=16128
+output_tokens=2110
+reasoning_tokens=845
+chars=5155

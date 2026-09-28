@@ -1,0 +1,7 @@
+model=opencode/mimo-v2.6-flash-free
+elapsed_sec=44.7
+cost_usd=0
+input_tokens=15357
+output_tokens=2633
+reasoning_tokens=60
+chars=6400

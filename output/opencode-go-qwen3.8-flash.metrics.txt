@@ -1,0 +1,7 @@
+model=opencode-go/qwen3.8-flash
+elapsed_sec=48.9
+cost_usd=0.004554
+input_tokens=6
+output_tokens=3340
+reasoning_tokens=0
+chars=6752

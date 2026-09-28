@@ -1,0 +1,7 @@
+model=opencode-go/hy4-preview
+elapsed_sec=61.4
+cost_usd=0.020693
+input_tokens=14664
+output_tokens=3155
+reasoning_tokens=229
+chars=7891
