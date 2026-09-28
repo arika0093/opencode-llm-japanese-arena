@@ -1,0 +1,10 @@
+model=opencode-go/longcat-2.5-preview-free
+elapsed_sec=67.7
+cost_usd=0
+input_tokens=40506
+output_tokens=3026
+reasoning_tokens=145
+chars=7530
+source=README.md
+files=README.md
+error=

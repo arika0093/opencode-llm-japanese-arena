@@ -1,0 +1,10 @@
+model=opencode-go/qwen3.8-max
+elapsed_sec=97.2
+cost_usd=0.095776
+input_tokens=27423
+output_tokens=3952
+reasoning_tokens=427
+chars=9334
+source=README.md
+files=README.md
+error=

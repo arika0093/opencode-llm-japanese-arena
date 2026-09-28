@@ -1,0 +1,10 @@
+model=opencode-go/mimo-v2.6-pro
+elapsed_sec=57.5
+cost_usd=0.012762
+input_tokens=21321
+output_tokens=3497
+reasoning_tokens=341
+chars=7731
+source=README.md
+files=README.md
+error=

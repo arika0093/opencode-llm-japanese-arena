@@ -1,0 +1,10 @@
+model=opencode-go/minimax-m3
+elapsed_sec=110.2
+cost_usd=0.011911
+input_tokens=14930
+output_tokens=6104
+reasoning_tokens=0
+chars=8155
+source=chat
+files=
+error=

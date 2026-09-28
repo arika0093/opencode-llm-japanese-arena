@@ -1,32 +1,81 @@
 # Configlue README 日本語生成ベンチマーク
 
-- 情報源: [context.md](./context.md)（このリポジトリを調査した固定コンテキスト）
-- 指示: [instruction.md](./instruction.md)（概要・主な特徴・基本的な使い方の3部のみ、Markdownのみ出力）
-- モデル: 各ファミリーの最新版 23件
+このフォルダは、**opencode で利用できる各モデルがどれだけ自然な日本語の技術文書を書けるか**を比較するための実験記録です。題材として OSS の .NET ライブラリ [Configlue](https://github.com/arika0093/Configlue) の README 解説を各モデルに書かせ、結果を保存しています。
 
-| # | モデル | 出力ファイル | 秒 | 文字数 | 出力tok | 推論tok | コスト(USD) |
-|---|---|---|---:|---:|---:|---:|---:|
-| 1 | `opencode-go/deepseek-v4.1-flash` | [opencode-go-deepseek-v4.1-flash.md](./output/opencode-go-deepseek-v4.1-flash.md) | 12.5 | 7581 | 3083 | 106 | 0.003936 |
-| 2 | `opencode-go/glm-5.3` | [opencode-go-glm-5.3.md](./output/opencode-go-glm-5.3.md) | 134.9 | 7697 | 3189 | 6100 | 0.061711 |
-| 3 | `opencode-go/glm-5.3-flash` | [opencode-go-glm-5.3-flash.md](./output/opencode-go-glm-5.3-flash.md) | 523.2 | 8391 | 16694 | 0 | 0.010595 |
-| 4 | `opencode-go/gpt-6-luna` | [opencode-go-gpt-6-luna.md](./output/opencode-go-gpt-6-luna.md) | 18.1 | 3967 | 1501 | 269 | 0.002472 |
-| 5 | `opencode-go/grok-4.7` | [opencode-go-grok-4.7.md](./output/opencode-go-grok-4.7.md) | 165.4 | 7937 | 3192 | 11363 | 0.11397 |
-| 6 | `opencode-go/hy4-preview` | [opencode-go-hy4-preview.md](./output/opencode-go-hy4-preview.md) | 61.4 | 7891 | 3155 | 229 | 0.020693 |
-| 7 | `opencode-go/kimi-k3` | [opencode-go-kimi-k3.md](./output/opencode-go-kimi-k3.md) | 39.8 | 6494 | 2679 | 507 | 0.091377 |
-| 8 | `opencode-go/longcat-2.5-preview-free` | [opencode-go-longcat-2.5-preview-free.md](./output/opencode-go-longcat-2.5-preview-free.md) | 50.4 | 6401 | 2511 | 355 | 0 |
-| 9 | `opencode-go/mimo-v2.6-flash` | [opencode-go-mimo-v2.6-flash.md](./output/opencode-go-mimo-v2.6-flash.md) | 56 | 6706 | 2765 | 51 | 0.002095 |
-| 10 | `opencode-go/mimo-v2.6-pro` | [opencode-go-mimo-v2.6-pro.md](./output/opencode-go-mimo-v2.6-pro.md) | 44 | 7717 | 3216 | 56 | 0.009526 |
-| 11 | `opencode-go/minimax-m3` | [opencode-go-minimax-m3.md](./output/opencode-go-minimax-m3.md) | 18.9 | 7382 | 2473 | 2858 | 0.010107 |
-| 12 | `opencode-go/muse-spark-1.3-contributor` | [opencode-go-muse-spark-1.3-contributor.md](./output/opencode-go-muse-spark-1.3-contributor.md) | 32.2 | 7217 | 2580 | 804 | 0.002093 |
-| 13 | `opencode-go/qwen3.8-flash` | [opencode-go-qwen3.8-flash.md](./output/opencode-go-qwen3.8-flash.md) | 48.9 | 6752 | 3340 | 0 | 0.004554 |
-| 14 | `opencode-go/qwen3.8-max` | [opencode-go-qwen3.8-max.md](./output/opencode-go-qwen3.8-max.md) | 66.8 | 7796 | 2930 | 650 | 0.051344 |
-| 15 | `opencode-go/space-bunny-free` | [opencode-go-space-bunny-free.md](./output/opencode-go-space-bunny-free.md) | 19.1 | 7323 | 2425 | 0 | 0 |
-| 16 | `opencode/big-pickle` | [opencode-big-pickle.md](./output/opencode-big-pickle.md) | 17.7 | 7621 | 2538 | 32 | 0 |
-| 17 | `opencode/ling-3.0-flash-fin-free` | [opencode-ling-3.0-flash-fin-free.md](./output/opencode-ling-3.0-flash-fin-free.md) | 6.7 | 3591 | 1448 | 104 | 0 |
-| 18 | `opencode/longcat-2.5-preview-free` | [opencode-longcat-2.5-preview-free.md](./output/opencode-longcat-2.5-preview-free.md) | 58.5 | 7472 | 2883 | 429 | 0 |
-| 19 | `opencode/mimo-v2.6-flash-free` | [opencode-mimo-v2.6-flash-free.md](./output/opencode-mimo-v2.6-flash-free.md) | 44.7 | 6400 | 2633 | 60 | 0 |
-| 20 | `opencode/muse-spark-1.3-contributor-free` | [opencode-muse-spark-1.3-contributor-free.md](./output/opencode-muse-spark-1.3-contributor-free.md) | 32.3 | 6909 | 2426 | 754 | 0 |
-| 21 | `opencode/nemotron-3-ultra-free` | [opencode-nemotron-3-ultra-free.md](./output/opencode-nemotron-3-ultra-free.md) | 164.4 | 6311 | 2756 | 96 | 0 |
-| 22 | `opencode/nemotron-3.5-lightning-free` | [opencode-nemotron-3.5-lightning-free.md](./output/opencode-nemotron-3.5-lightning-free.md) | 145.5 | 5155 | 2110 | 845 | 0 |
-| 23 | `opencode/space-bunny-free` | [opencode-space-bunny-free.md](./output/opencode-space-bunny-free.md) | 18.1 | 7152 | 2364 | 0 | 0 |
+## 目的
 
+- モデルごとの日本語ドキュメント生成の品質（自然さ・構成・正確さ）を比較する。
+- 同一の入力コンテキストを与え、条件だけを変えた2つの指示で挙動の差を見る。
+
+## 手法
+
+1. このセッションのモデル（`opencode-go/deepseek-v4.1-flash`）が Configlue リポジトリを調査し、共通コンテキスト `context.md`（README・設計ドキュメント・公開 API・パッケージ一覧などを要約）を作成。
+2. 同じ `context.md` を添付して、各モデルに README 用の日本語解説を書かせる。
+3. 生成結果を `output/` に保存する。
+
+対象モデルは「各ファミリーの最新版」23件です（`opencode/` と `opencode-go/` の2プロバイダ）。
+
+## run1 と run2 の違い
+
+| | run1 | run2 |
+| --- | --- | --- |
+| 指示 (`instruction.md`) | 詳細な要件付き（3部構成、日本語、創作禁止、Markdownのみ、ツール使用禁止など） | **2文のみ**（下記） |
+| 出力の受け取り方 | ツール使用禁止。最終メッセージの Markdown をそのまま保存 | ファイル生成を許可。モデルが `README.md` を実際に作成 |
+| 成果物 | チャット本文 | `README.md`（生成できた場合）／チャット本文（しなかった場合） |
+| 実行補助 | `run-bench.ps1` | `run-bench2.ps1`（`opencode.json` で bash 等を deny） |
+
+run2 の指示文は次の2文だけです。
+
+> 添付の context.md は .NET ライブラリ「Configlue」の調査メモです。これを唯一の情報源として、Configlue の README に載せる日本語解説を作成してください。
+
+## ディレクトリ構成
+
+```text
+configlue-readme-bench/
+├── README.md                     このファイル（取り組みの説明）
+├── run1/
+│   ├── context.md                共通コンテキスト（調査メモ）
+│   ├── instruction.md            詳細な指示
+│   ├── run-bench.ps1             実行スクリプト
+│   └── output/
+│       ├── _summary.md           モデル別メトリクス一覧
+│       ├── combined-all.md       全モデル出力の連結（読み比べ用）
+│       ├── <model>.md            各モデルの生成結果
+│       └── <model>.metrics.txt   秒数・トークン・コスト
+└── run2/
+    ├── context.md                共通コンテキスト（run1 と同一）
+    ├── instruction.md            最小の指示（2文のみ）
+    ├── opencode.json             run2 用の権限設定（edit=allow, bash 等=deny）
+    ├── run-bench2.ps1            実行スクリプト
+    ├── files/                    ★ モデルが実際に生成したファイル（<model>/ 配下に保存）
+    └── output/
+        ├── _summary.md
+        ├── combined-all.md
+        ├── <model>.md            最終成果物（README.md or チャット本文）
+        └── <model>.metrics.txt
+```
+
+`<model>` は `opencode-go/deepseek-v4.1-flash` のような ID を `opencode-go-deepseek-v4.1-flash` のように平坦化した名前です。
+
+## 結果の見方
+
+- まず `run1/output/_summary.md` と `run2/output/_summary.md` で一覧を確認。
+- 読み比べは `run1/output/combined-all.md` / `run2/output/combined-all.md` が便利。
+- run2 でモデルが作った実ファイルは `run2/files/<model>/` にあります（run1 はチャット出力のみなので該当なし）。
+
+## 再実行方法
+
+`opencode` の実体（`opencode.exe`）を解決したうえで、各スクリプトを実行します。モデル一覧はスクリプト内 `$models` を編集してください。
+
+```powershell
+# run1（詳細指示・ツール禁止・チャット出力を保存）
+pwsh -File .\run1\run-bench.ps1
+
+# run2（最小指示・ファイル生成を許可）
+pwsh -File .\run2\run-bench2.ps1
+```
+
+## 出典
+
+- 題材: [Configlue](https://github.com/arika0093/Configlue)（Apache-2.0）
+- `context.md` は上記リポジトリの README および `docs/` を要約したものです。

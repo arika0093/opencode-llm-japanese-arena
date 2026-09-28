@@ -1,0 +1,10 @@
+model=opencode-go/gpt-6-luna
+elapsed_sec=43
+cost_usd=0.006529
+input_tokens=21
+output_tokens=3997
+reasoning_tokens=337
+chars=7316
+source=README.md
+files=README.md
+error=

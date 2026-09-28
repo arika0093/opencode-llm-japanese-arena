@@ -1,0 +1,10 @@
+model=opencode/nemotron-3-ultra-free
+elapsed_sec=105.3
+cost_usd=0
+input_tokens=42278
+output_tokens=3420
+reasoning_tokens=178
+chars=7405
+source=README.md
+files=README.md
+error=

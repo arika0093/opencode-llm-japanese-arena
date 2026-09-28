@@ -1,0 +1,10 @@
+model=opencode-go/muse-spark-1.3-contributor
+elapsed_sec=23.6
+cost_usd=0.002601
+input_tokens=18075
+output_tokens=2924
+reasoning_tokens=866
+chars=7862
+source=chat
+files=
+error=
