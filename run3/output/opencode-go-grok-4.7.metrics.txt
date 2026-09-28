@@ -1,0 +1,10 @@
+model=opencode-go/grok-4.7
+elapsed_sec=624.9
+cost_usd=0.503858
+input_tokens=92767
+output_tokens=4213
+reasoning_tokens=40169
+chars=8337
+source=chat
+files=
+error=

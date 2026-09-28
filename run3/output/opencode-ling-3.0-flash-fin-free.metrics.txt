@@ -1,0 +1,10 @@
+model=opencode/ling-3.0-flash-fin-free
+elapsed_sec=79.3
+cost_usd=0
+input_tokens=0
+output_tokens=0
+reasoning_tokens=0
+chars=4
+source=chat
+files=
+error=Error from provider (Console): Upstream request failed: Endpoint is unavailable.

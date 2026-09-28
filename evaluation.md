@@ -1,6 +1,10 @@
 # Configlue README 日本語生成ベンチマーク 評価結果
 
-`run1/output/` と `run2/output/` の全モデル出力を、**著者が大事とするポイント（元の4項目）**＋[日本語技術文書の文章規範（k16shikano/SKILL.md）](https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d)の**重複しない全項目**で評価した結果です。合計点（40点満点＝8軸×5）の高い順に並べています。
+`run1/output/`・`run2/output/`・`run3/output/` の全モデル出力を、**著者が大事とするポイント（元の4項目）**＋[日本語技術文書の文章規範（k16shikano/SKILL.md）](https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d)の**重複しない全項目**で評価した結果です。合計点（40点満点＝8軸×5）の高い順に並べています。
+
+- run1: 日本語コンテキスト＋詳細指示（3部構成）・チャット出力
+- run2: 日本語コンテキスト＋2文の最小指示・ファイル生成可
+- run3: **英語コンテキスト＋英語の最小指示**（run2の英語版）・ファイル生成可
 
 ## 評価軸（各5段階・★5が最良）
 
@@ -20,6 +24,7 @@
 > **除外**: ファイル破損・生成失敗系は表から除外しました。
 > - run1: `opencode-big-pickle`（文字化け＋中文混入）、`opencode-go-space-bunny-free`（中文混入で破綻）、`opencode-space-bunny-free`（`—— :main:` テンプレ異物）
 > - run2: `opencode-ling-3.0-flash-fin-free`（空・エラー）、`opencode-nemotron-3.5-lightning-free`（作業報告のみ）、`opencode-space-bunny-free`（中文・韓国語混入）、`opencode-go-minimax-m3`（`プロvenance` 破損＋文の未完）
+> - run3: `opencode-ling-3.0-flash-fin-free`（空・エラー）、`opencode-go/grok-4.7`（出力なし）、`opencode-go/mimo-v2.6-pro`（READMEでなく計画文のみ）、`opencode-nemotron-3.5-lightning-free`（文字化け・外国語混入で崩壊）、`opencode-space-bunny-free`（`judged`/`jihad`/`ENDO` 等の異物混入で崩壊）
 
 ## run1（詳細指示・3部構成・チャット出力）— 合計点降順
 
@@ -69,10 +74,36 @@
 | 18 | opencode-muse-spark-1.3-contributor-free | ★1 | ★3 | ★2 | ★4 | ★4 | ★3 | ★3 | ★3 | **23** | 冒頭に作成メタ文＋contextをほぼ完全踏襲 |
 | 19 | opencode-go/muse-spark-1.3-contributor | ★2 | ★3 | ★2 | ★4 | ★3 | ★3 | ★2 | ★3 | **22** | 冒頭「〜を作成します。」のメタ文漏出 |
 
+## run3（英語コンテキスト＋英語の最小指示・ファイル生成可）— 合計点降順
+
+| 順位 | モデル | ① | ② | ③ | ④ | ⑤ | ⑥ | ⑦ | ⑧ | 合計 | メモ |
+| :---: | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | --- |
+| 1 | opencode-muse-spark-1.3-contributor-free | ★5 | ★3 | ★3 | ★4 | ★5 | ★4 | ★5 | ★5 | **34** | 独自見出しで論証明快。credential等の英単語混入と「閉じ」 |
+| 2 | opencode-go/hy4-preview | ★5 | ★5 | ★2 | ★4 | ★4 | ★4 | ★4 | ★5 | **33** | 独自目次・表で再構成。退役/読み取り面の直訳が残る |
+| 3 | opencode-go/qwen3.8-max | ★4 | ★3 | ★2 | ★4 | ★5 | ★5 | ★4 | ★5 | **32** | 目次整備で構成良。退役・来歴・読み取り面の直訳 |
+| 4 | opencode-go/space-bunny-free | ★4 | ★3 | ★3 | ★5 | ★5 | ★4 | ★3 | ★5 | **32** | 「読み取り面」を回避し「廃止」を使用。太字・英単語混入 |
+| 5 | opencode-go/kimi-k3 | ★3 | ★5 | ★2 | ★4 | ★3 | ★4 | ★4 | ★5 | **30** | context順を概ね踏襲。「退避」「読み取り面」の直訳 |
+| 6 | opencode-go/muse-spark-1.3-contributor | ★4 | ★4 | ★2 | ★4 | ★4 | ★4 | ★4 | ★4 | **30** | 独自導入・再構成。「引退」「読み取り面」の直訳 |
+| 7 | opencode-go/longcat-2.5-preview-free | ★3 | ★5 | ★2 | ★4 | ★3 | ★3 | ★4 | ★5 | **29** | 特徴先行で再構成。「引退」「読み取り画面」の直訳 |
+| 8 | opencode-mimo-v2.6-flash-free | ★4 | ★4 | ★2 | ★4 | ★4 | ★3 | ★4 | ★4 | **29** | 独自導入ありだが節順はcontext踏襲。退役・読み取り面 |
+| 9 | opencode-big-pickle | ★4 | ★4 | ★2 | ★4 | ★3 | ★3 | ★4 | ★4 | **28** | 独自導入だが「退役」「読み取り面」の直訳残存 |
+| 10 | opencode-go/gpt-6-luna | ★4 | ★4 | ★2 | ★4 | ★4 | ★4 | ★2 | ★4 | **28** | 散文的で理解良好だがemダッシュ多用・退役残 |
+| 11 | opencode-longcat-2.5-preview-free | ★3 | ★4 | ★2 | ★3 | ★4 | ★4 | ★4 | ★4 | **28** | 「読み取り画面」「退屈な作業」等の誤訳が目立つ |
+| 12 | opencode-go/mimo-v2.6-flash | ★4 | ★3 | ★2 | ★4 | ★3 | ★3 | ★3 | ★5 | **27** | 目次付き再構成。退役直訳と英単語混入 |
+| 13 | opencode-go/qwen3.8-flash | ★2 | ★2 | ★2 | ★4 | ★4 | ★4 | ★4 | ★4 | **26** | 見出し「Why Configlue?」未訳。直訳多数 |
+| 14 | opencode-go/deepseek-v4.1-flash | ★2 | ★4 | ★2 | ★3 | ★3 | ★3 | ★4 | ★4 | **25** | contextの見出し順をなぞり「寄与」「退役」 |
+| 15 | opencode-go/glm-5.3 | ★3 | ★3 | ★2 | ★3 | ★3 | ★3 | ★4 | ★4 | **25** | 目次と制限分離は良好も「引退」「読み取り面」 |
+| 16 | opencode-go/minimax-m3 | ★4 | ★2 | ★2 | ★4 | ★2 | ★3 | ★3 | ★4 | **24** | 見出し`Quick Start`英字。リタイア直訳、制約が機能内 |
+| 17 | opencode-go/glm-5.3-flash | ★2 | ★3 | ★1 | ★3 | ★3 | ★3 | ★4 | ★3 | **22** | 「引退」「読み取りの表面」「寄与を引き上げ」誤訳 |
+| 18 | opencode-nemotron-3-ultra-free | ★1 | ★4 | ★2 | ★3 | ★2 | ★3 | ★2 | ★2 | **19** | contextを順序ごと踏襲し執筆指示節まで転載 |
+
 ## 総括
 
 - **run1 トップ**: `opencode-go/mimo-v2.6-pro`（33点）。次いで `opencode-go/longcat-2.5-preview-free`・`opencode-go/qwen3.8-max`（32点）。
 - **run2 トップ**: `opencode-go/gpt-6-luna`（33点）。次いで `opencode-go/qwen3.8-max`（31点）、`opencode-go/hy4-preview`（30点）。
-- **両runで高水準**: `opencode-go/gpt-6-luna`（run1 29点／run2 33点）、`opencode-go/qwen3.8-max`（32／31）、`opencode-go/longcat-2.5-preview-free`（32／28）。
-- **全体的に低い軸**: ③直訳回避（`退役`継承）と⑦演出抑制（太字多用）。②日英混在は破損系を除けば概ね高評価。
-- ⑥読み手負荷を加えたことで、`gpt-6-luna`（run1）は概念表が無く未定義語を使う点が減点となり順位を下げた。
+- **run3 トップ**: `opencode-muse-spark-1.3-contributor-free`（34点）。次いで `opencode-go/hy4-preview`（33点）、`opencode-go/qwen3.8-max`・`opencode-go/space-bunny-free`（32点）。
+- **run3 の最大の特徴**: 英語コンテキストの影響で **③直訳回避が全体的に悪化**。`retirement` が「退役／引退／リタイア／退避」、`scoped to` が「〜にスコープされ／〜に閉じ」、`read surface` が「読み取り面／読み取り画面／読み取りの表面」、`contribution` が「寄与」と直訳される例がほぼ全モデルに出現。run1/run2より直訳が増えた。
+- **run3 の②日英混在も低下**: 見出し `Why Configlue?`・`Quick Start` の未訳、`provider / codec / resource / generated-model` や `credential`・`assembly` 等の英語露出が増加。
+- **両runで高水準**: `opencode-go/qwen3.8-max`（run1 32／run2 31／run3 32）、`opencode-go/hy4-preview`（28／30／33）。
+- **全体的に低い軸**: ③直訳回避と⑦演出抑制（太字多用）。②日英混在は破損系を除けば run1/run2 では概ね高評価だったが、run3 では低下。
+- **構造**: run3 は run1/run2 に合わせ、`output/<model>.md`（最終成果物）＋`output/<model>.metrics.txt`＋`files/<model>/README.md`（生成ファイル）に正規化済み。

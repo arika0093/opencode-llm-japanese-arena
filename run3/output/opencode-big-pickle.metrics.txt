@@ -1,0 +1,10 @@
+model=opencode/big-pickle
+elapsed_sec=128.2
+cost_usd=0
+input_tokens=45613
+output_tokens=6992
+reasoning_tokens=2031
+chars=7886
+source=README.ja.md
+files=README.ja.md
+error=

@@ -1,0 +1,10 @@
+model=opencode/space-bunny-free
+elapsed_sec=45.4
+cost_usd=0
+input_tokens=12906
+output_tokens=3093
+reasoning_tokens=485
+chars=7636
+source=chat
+files=
+error=

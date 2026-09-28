@@ -1,0 +1,10 @@
+model=opencode-go/glm-5.3
+elapsed_sec=77.2
+cost_usd=0.061903
+input_tokens=18046
+output_tokens=4286
+reasoning_tokens=309
+chars=7845
+source=README.md
+files=README.md
+error=

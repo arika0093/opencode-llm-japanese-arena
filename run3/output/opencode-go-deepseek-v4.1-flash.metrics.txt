@@ -1,0 +1,10 @@
+model=opencode-go/deepseek-v4.1-flash
+elapsed_sec=34.2
+cost_usd=0.005024
+input_tokens=16586
+output_tokens=3525
+reasoning_tokens=550
+chars=7605
+source=README.md
+files=README.md
+error=
